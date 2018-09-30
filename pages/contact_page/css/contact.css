@@ -1,0 +1,18 @@
+
+/* Form CSS */
+
+#contact-form {
+    margin-left: 37%;
+    padding-top: 10%;
+}
+
+.form-group label {
+    color: white;
+    opacity: 0.9;
+}
+
+.btn {
+    margin-top:200px;
+    margin-left: -420px;
+    border-radius: 5%;
+}

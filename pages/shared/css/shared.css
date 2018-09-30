@@ -1,0 +1,49 @@
+/* Set min width and height for each page */
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Background CSS */
+
+#wrapper-left {
+    float: left;
+}
+.background-container {
+    min-height: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right bottom, #082f69, #004376, #005169, #005b49, #036221);
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+    background-size:  cover;
+}
+
+/* Navigation CSS */
+
+#icon-bar {
+    list-style-type: none;
+    margin-left: -28px;
+    position: static;
+}
+.nav-item img {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-top: 20px;
+    opacity: 0.5;
+}
+
+.nav-active img {
+    opacity: 1;
+}
+
+.nav-item img:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
