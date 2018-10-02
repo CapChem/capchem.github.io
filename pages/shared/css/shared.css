@@ -46,4 +46,5 @@ html, body {
 .nav-item img:hover {
     opacity: 1;
     transition: 0.5s;
+    cursor: pointer;
 }
