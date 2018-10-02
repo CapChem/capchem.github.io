@@ -18,6 +18,12 @@
 
     <!-- CSS for this specific Page -->
     <link href='pages/landing_page/css/landing_page.css' rel="stylesheet" type="text/css"/>
+    <link href='pages/about_page/css/about.css' rel="stylesheet" type="text/css"/>
+    <link href='pages/contact_page/css/contact.css' rel="stylesheet" type="text/css"/>
+    <link href='pages/projects_page/css/projects.css' rel="stylesheet" type="text/css"/>
+    <link href='pages/team_page/css/team.css' rel="stylesheet" type="text/css"/>
+    <link href='pages/pricing_page/css/pricing.css' rel="stylesheet" type="text/css"/>
+
 
     <!-- CSS for shared pages -->
     <link href='pages/shared/css/shared.css' rel="stylesheet" type="text/css"/>
@@ -30,36 +36,22 @@
   <body>
 
     <div class="background-container">
-      <div id="wrapper-left">
-        <nav id="icon-bar"></nav>
-      </div>
-      <div id="wrapper-right">
-      <div class="row my-auto">
-        <div class="col">
+        <div id="wrapper-left">
+          <nav id="icon-bar">
+            <ul id="nav_list">
+              <li><a class='nav-item nav-active' ><img src='pages/shared/nav_icons/home.svg' id="landing_page" onerror='this.onerror=null;'/></a></li>
+              <li><a class="nav-item"><img src='pages/shared/nav_icons/application.svg' id="about_page" onerror='this.onerror=null;'/></a></li>
+              <li><a class="nav-item"><img src='pages/shared/nav_icons/network.svg' id="team_page" onerror='this.onerror=null;'/></a></li>
+              <li><a class="nav-item"><img src='pages/shared/nav_icons/projects.svg' id="projects_page" onerror='this.onerror=null;'/></a></li>
+              <li><a class="nav-item"><img src='pages/shared/nav_icons/hand.svg' id="pricing_page" onerror='this.onerror=null;'/></a></li>
+              <li><a class="nav-item"><img src='pages/shared/nav_icons/contact.svg' id="contact_page" onerror='this.onerror=null;'/></a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="col-lg">
-          <h1 id="landing-title">Capture Chemistry</h1>
-          <hr class="brace">
-          <p>The Missing Link between Academia and Industry</p>
-          <div id="icon-wrapper">
-            <div class="icon science">
-              <img src='pages/landing_page/images/chemistry.svg' />
-              <span>Science</span>
-            </div>
-            <div class="icon product">
-              <img src='pages/landing_page/images/product.svg' />
-              <span>Product</span>
-            </div>
-            <div class="icon manage">
-              <img src='pages/landing_page/images/design.svg' />
-              <span>Consultancy</span>
-            </div>
-          </div>
+        <div id="wrapper-right">
         </div>
         <div class="col">
         </div>
-      </div>
-      </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
@@ -69,9 +61,33 @@
 
     <!-- JS Script for loading navigation -->
     <script>
-      $(function() {
-          $('#icon-bar').load('navigation.html')
-      })
+
+      window.onload = function () {
+          $('#wrapper-right').load('pages/landing_page/landing_page.html');
+      };
+      $(document).ready(function() {
+          $('#landing_page').click(function () {
+              $('#wrapper-right').load('pages/landing_page/landing_page.html');
+          });
+          $('#about_page').click(function () {
+              alert("CHRIS");
+              $('#wrapper-right').load('pages/about_page/about.html');
+          });
+          $('#team_page').click(function () {
+              $('#wrapper-right').load('pages/team_page/team.html');
+          });
+          $('#projects_page').click(function () {
+              $('#wrapper-right').load('pages/projects_page/projects.html');
+          });
+          $('#pricing_page').click(function () {
+              $('#wrapper-right').load('pages/pricing_page/pricing.html');
+          });
+          $('#contact_page').click(function () {
+              $('#wrapper-right').load('pages/contact_page/contact.html');
+          });
+      });
+
+
     </script>
 
     <!-- Custom scripts for this template -->
